@@ -1,0 +1,294 @@
+
+// This ur_rules file is written by Muhammad yousaf (Afghanistan).
+// This file is UTF8 encoded 
+//  phoneme rules for Pashto
+
+// vowel 
+.L01 ا و ه ي ې
+
+// Consonants
+.L02  ب ت ټ ث ج ح خ د ذ ر ز س ش ص ض ط ظ څ ځ ڼ پ ئ ښ ۍ‌‌ ؤ  ژ ‌‌ډ  ږ چ غ ع ف ق ک ګ م ن ی ل 
+
+// all alphabets
+.L03  ب ت ټ ث ج ح خ د ذ ر ز س ش ص ض ط ظ څ ځ ڼ پ ئ ښ ۍ ژ ‌‌ډ  ږ چ غ ؤ ع ف ق ک ګ م ن ی ل ا آ و ه ي ې
+
+// all without which can occur at the start mid and end
+.L04	ب ت ټ ث ج ح خ د ذ ر ز س ش ص ض ط ظ څ ځ ڼ پ ئ ښ ژ ‌‌ډ  ږ چ غ ؤ ع ف ق ک ګ م ن ل ا و ه ي آ
+// all without ا آ
+.L05  ب ت ټ ث ج ح خ د ذ ر ز س ش ص ض ط ظ څ ځ ڼ پ ئ ښ ۍ ژ ‌‌ډ  ږ چ غ ؤ ع ف ق ک ګ م ن ی ل و ه ي ې
+
+.L06 ا
+
+// VOWELS
+
+.group آ
+	آ	a:
+	_) آ	a:
+.group ا
+	ا	a:
+	_) ا	a
+	_) او	o:
+	ا (_	a:
+	_) او (_	aw
+	_ا) ا	a
+	L04) ا (L03	a:
+	_L04) ا (L03	a:
+	_L04) ا (L03_	a:
+	L04) ا (L03	a:
+	// suffixes
+	ان (_	a:n
+	او (_	AU
+	اند (_	and
+	انو (_	a:no
+	انه (_	a:n@
+	اوس	os	
+.group ب
+	ب 	b
+	_) ب (L01	b
+	_) ب (L02	ba
+	L03) ب (L01	b
+	ب (_	b
+	_) بد	bad
+	_) بې	be
+	_) با	ba:
+	_) بيا	bja:
+	 به	b@	
+	 باندې	ba:nde
+	 باید	ba:jad
+	 
+	 
+.group پ
+           پ          p
+           پ (_      p
+        _) پ (L02	pa
+	‫_)پرې	pRe
+	L03) پ (L01	p
+	پر	p@r
+	‫_) پر (ې	pR
+	_) پ(ه_	p@	
+	‫‫پالنه(_	pa:l@na
+	پاله(_	pa:la
+	_) پورې	pore
+	_) پرا	pra:
+	_)پرې	pre
+	
+.group ت
+	ت            t
+        _) ت (L02	ta
+           ت (_	t
+	‬_) ت (ه_	t@
+		L03) ت (L01	t
+	تر	t@r
+	توب(_	tob
+	تیا(_	tja:
+	تون(_	tun
+	تاسو	ta:so
+		
+		
+		
+		
+.group ټ
+	ټ          t.
+        _) ټ (L02	t.a
+           ټ (_	t.
+           ټ (L01	t.
+	L03) ټ (L01	t.
+.group ث
+           ث          s
+           ث (_        s
+       _) ث (L02	s
+         L03) ث (L01	s
+.group ج
+           ج           J
+           ج (L01 	 J
+           ج (_        J
+       _) ج (L02	Ja     
+       L03) ج (L01	J
+          جن(_	J@n
+.group چ
+	چ	c
+	چ (L01	c
+       _) چ (L02	ca
+           چ (_        c
+       // L03) چ (L01	c
+         چي(_	ci
+         چک(_	cak          
+.group ح
+	ح	H
+	ح (L01	H
+       _) ح (L02	Ha
+           ح (_        H
+.group خ
+	خ	x
+	خ (L01	x
+       _) خ (L02	xa
+           خ (_        x
+.group څ
+	څ	ts
+	څ (L01	ts
+       _) څ (L02	tsa
+           څ (_        ts
+.group ځ
+	ځ	dz
+	ځ (L01	dz
+       _) ځ (L02	dza
+           ځ (_        dz
+.group د
+	د	d
+	د (L01	d
+       _) د (L02	da
+           د (_        d
+.group ډ
+	ډ	d.
+	ډ (L01	d.
+       _) ډ (L02	d.a
+           ډ (_        d.
+.group ذ
+	ذ	z
+	ذ (L01	z
+       _) ذ (L02	za
+           ذ (_        z
+.group ر
+	ر	R
+	ر (L01	R
+       _) ر (L02	Ra
+           ر (_        R
+.group ړ
+	ړ	r.
+	ړ (L01	r.
+       _) ړ (L02	r.a
+           ړ (_        r. 
+.group ز
+	ز	z
+	ز (L01	z
+       _) ز (L02	za
+           ز (_        z
+.group ژ
+	ژ	Z
+	ژ (L01	Z
+       _) ژ (L02	Za
+           ژ (_        Z
+.group ږ
+	ږ	J^
+	ږ (L01	J^
+       _) ږ (L02	J^a
+           ږ (_        J^
+.group س
+	س	s
+	س (L01	s
+       _) س (L02	sa
+           س (_        s
+.group ش
+	ش	S
+	ش (L01	S
+       _) ش (L02	Sa
+           ش (_        S
+	
+.group ښ
+	ښ	C
+	ښ (L01	C
+       _) ښ (L02	Ca
+           ښ (_        C
+.group ص
+	ص	s
+	ص (L01	s
+       _) ص (L02	sa
+           ص (_        s
+.group ض
+	ض	z
+	ض (L01	z
+       _) ض (L02	za
+           ض (_        z
+.group ط
+	ط	t
+	ط (L01	t
+       _) ط (L02	ta
+           ط (_        t
+.group ظ
+	ظ	z.
+	ظ (L01	z.
+       _) ظ (L02	z.a
+           ظ (_        z.
+.group ع
+           ع           ?
+           ع (L01	?
+       _) ع (L02	?a
+           ع (_        ?
+.group غ
+	غ	Q
+	غ (L01	Q
+       _) غ (L02	Qa
+           غ (_        Q
+.group ف
+	ف	f
+	ف (L01	f
+       _) ف (L02	fa
+           ف (_        f
+.group ق
+	ق	q
+	ق (L01	q
+       _) ق (L02	qa
+           ق (_        q
+.group ک
+	ک	k
+	ک (L01	k
+       _) ک (L02	ka
+           ک (_        k
+.group ګ
+	ګ	g
+	ګ (L01	g
+       _) ګ (L02	ga
+           ګ (_        g
+.group ل
+	ل	l
+	ل (L01	l
+       _) ل (L02	la
+           ل (_        l
+.group م
+	م	m
+	م (L01	m
+       _) م (L02	ma
+           م (_        m
+.group ن
+	ن	n
+	ن (L01	R
+       _) ن (L02	R
+           ن (_        R
+.group ڼ
+	ڼ	n.
+	ڼ (L01	n.
+       _) ڼ (L02	n.a
+           ڼ (_        n.
+.group و
+	و	o:
+	_) و	v
+	و (_ o:
+	و (ه_ v
+	و (ل_ va
+.group ه
+	_الل) ه (_+++	h
+	_) ه	h
+.group ی	
+	ی	aI
+	ی (_	aI
+
+.group ي
+	ي	j
+	ي (_	i:
+	ي (L01	j
+	_) ي	j
+	
+.group ئ
+	ئ	@I
+	ئ (_	aI
+
+.group ې
+	ې	e
+	ې (_	e
+	L03) ې 	e
+	
+.group ۍ
+	ۍ	@I
+	ۍ (_	@I
+
+	
